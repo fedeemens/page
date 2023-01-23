@@ -1,0 +1,47 @@
+@use '../../../variables.scss' as *;
+
+#toggle {
+    position: relative;
+    background-color: $black;
+    border-radius: 15px;
+    width: 47px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.4s;
+
+    i {
+        font-size: 16px;
+        color: $white;
+        transition: all 0.4s;
+    }
+
+    &::after {
+        content: '';
+        height: 16px;
+        width: 16px;
+        border-radius: 15px;
+        background-color: $white;
+        position: absolute;
+        left: 4.5px;
+        top: 4.5px;
+        transition: all .4s;
+    }
+
+    &.dark-mode {
+        background-color: $white;
+
+        i {
+            color: $black;
+        }
+
+        &::after {
+            left: calc(100% - 20.5px);
+            background-color: $black;
+        }
+    }
+}

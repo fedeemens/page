@@ -1,10 +1,26 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
+import "./main.scss";
+import Home from "./components/home/home";
+import Nav from "./components/nav/nav";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+function App() {
+  const [mode, setMode] = useState("light");
+
+  function changeAppMode() {
+    setMode(mode == "light" ? "dark" : "light");
+  }
+
+  return (
+    <div id={mode}>
+      <Nav changeAppMode={changeAppMode} />
+      <Home />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

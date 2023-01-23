@@ -1,0 +1,30 @@
+.nav {
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+    .nav-title {
+        text-decoration: none;
+        font-size: 1.4rem;
+        letter-spacing: .1em;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+#light nav{
+    // background-color: black;
+}
+
+#dark nav{
+    // background-color: white;
+}
