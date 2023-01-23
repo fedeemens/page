@@ -31,17 +31,17 @@
         top: 4.5px;
         transition: all .4s;
     }
+}
 
-    &.dark-mode {
-        background-color: $white;
+#dark #toggle {
+    background-color: $white;
 
-        i {
-            color: $black;
-        }
+    i {
+        color: $black;
+    }
 
-        &::after {
-            left: calc(100% - 20.5px);
-            background-color: $black;
-        }
+    &::after {
+        left: calc(100% - 20.5px);
+        background-color: $black;
     }
 }
