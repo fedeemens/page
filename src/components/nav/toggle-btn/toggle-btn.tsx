@@ -1,6 +1,10 @@
 import "./toggle-btn.scss";
 
-function Toggle({ changeAppMode }: any) {
+interface Props {
+  changeAppMode: () => void;
+}
+
+function Toggle({ changeAppMode }: Props) {
   return (
     <div id="toggle" onClick={changeAppMode}>
       <i className="material-icons-outlined">light_mode</i>
