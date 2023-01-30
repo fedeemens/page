@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+//scss
 import "./main.scss";
+
+//components
 import Home from "./components/home/home";
 import Nav from "./components/nav/nav";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import About from "./components/about/about";
+import Work from "./components/work/work";
+import Contact from "./components/contact/contact";
 
 const router = createBrowserRouter([
   {
@@ -11,8 +18,16 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/test",
-    element: <h1>test</h1>,
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/work",
+    element: <Work />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
   },
 ]);
 
